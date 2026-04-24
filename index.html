@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iRead — Journal Reading Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="#hero" class="nav-brand">
+    <span class="nav-brand-text">iRead</span>
+    <span class="nav-brand-sub">Journal Reading Community</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#vote">Monthly Vote</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#session">Sessions</a></li>
+    <li><a href="#symposium">Symposium</a></li>
+    <li><a href="#join" class="nav-cta">Join Now</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#how" onclick="toggleMenu()">How It Works</a>
+  <a href="#vote" onclick="toggleMenu()">Monthly Vote</a>
+  <a href="#events" onclick="toggleMenu()">Events</a>
+  <a href="#session" onclick="toggleMenu()">Sessions</a>
+  <a href="#symposium" onclick="toggleMenu()">Symposium</a>
+  <a href="#join" onclick="toggleMenu()">Join Now</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-line"></span>
+      <span class="hero-eyebrow-text">Est. 2025 · UK Research Community</span>
+    </div>
+    <h1 class="hero-title">
+      Read Deeply.<br><em>Think Critically.</em><br>Lead Boldly.
+    </h1>
+    <p class="hero-desc">
+      A research community dedicated to rigorous journal reading in business and management. Because in the age of AI, those who actually read will lead.
+    </p>
+    <div class="hero-btns">
+      <a href="#join" class="btn-primary">
+        <span>Join the Community</span>
+        <span>→</span>
+      </a>
+      <a href="#vote" class="btn-outline">
+        <span>Vote This Month</span>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">12</div>
+        <div class="hero-stat-label">Sessions / Year</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-label">Journals / Month</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">1</div>
+        <div class="hero-stat-label">Annual Symposium</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">UK</div>
+        <div class="hero-stat-label">Wide & Growing</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-bg-art"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-card-stack">
+      <div class="journal-card">
+        <div class="jc-rank">🥇 Top Vote</div>
+        <div class="jc-title">"AI-Enabled Decision Making in Supply Chain Networks: A Systematic Review"</div>
+        <div class="jc-meta">J. of Operations Management · ABS 4★</div>
+        <div class="jc-votes">
+          <div class="vote-dot"></div><div class="vote-dot"></div><div class="vote-dot"></div>
+          <div class="vote-dot"></div><div class="vote-dot empty"></div>
+          <span class="jc-vote-count">42 votes</span>
+        </div>
+      </div>
+      <div class="journal-card">
+        <div class="jc-rank">🥈 Runner Up</div>
+        <div class="jc-title">"Algorithmic Management and Worker Autonomy in Gig Platforms"</div>
+        <div class="jc-meta">Work, Employment & Society · ABS 3</div>
+        <div class="jc-votes">
+          <div class="vote-dot"></div><div class="vote-dot"></div><div class="vote-dot"></div>
+          <div class="vote-dot empty"></div><div class="vote-dot empty"></div>
+          <span class="jc-vote-count">31 votes</span>
+        </div>
+      </div>
+      <div class="journal-card">
+        <div class="jc-rank">🥉 Third Place</div>
+        <div class="jc-title">"Transformational Leadership in Hybrid Work Environments"</div>
+        <div class="jc-meta">Leadership Quarterly · ABS 4★</div>
+        <div class="jc-votes">
+          <div class="vote-dot"></div><div class="vote-dot"></div>
+          <div class="vote-dot empty"></div><div class="vote-dot empty"></div><div class="vote-dot empty"></div>
+          <span class="jc-vote-count">18 votes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track" id="ticker-track">
+    <span class="ticker-item"><span class="ticker-diamond"></span>Journal of Operations Management</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>Leadership Quarterly</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>MIS Quarterly</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>Academy of Management Journal</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>British Journal of Management</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>Supply Chain Management</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>Journal of Management Studies</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>Human Relations</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>Organization Studies</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>AI & Society</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="ticker-item"><span class="ticker-diamond"></span>Journal of Operations Management</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>Leadership Quarterly</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>MIS Quarterly</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>Academy of Management Journal</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>British Journal of Management</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>Supply Chain Management</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>Journal of Management Studies</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>Human Relations</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>Organization Studies</span>
+    <span class="ticker-item"><span class="ticker-diamond"></span>AI & Society</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-left reveal">
+    <div class="section-label">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Who We Are</span>
+    </div>
+    <h2 class="section-heading">A community built on <em>intellectual rigour</em></h2>
+    <div class="mission-box">
+      <p class="mission-text">To cultivate a UK-wide community of doctoral researchers who engage rigorously with management literature — resisting intellectual shortcuts, championing deep reading, and generating critical dialogue that advances theory and practice.</p>
+    </div>
+  </div>
+  <div class="about-right">
+    <p class="about-intro reveal">
+      Three doctoral researchers at the University of Huddersfield — specialising in AI Supply Chain Analytics, Leadership, and Algorithmic Work — founded iRead because they believe that in an era where AI summarises everything, the researchers who actually read will be the ones who discover what AI cannot.
+    </p>
+
+    <div class="founders-section reveal">
+      <p class="founders-label">Founding Researchers</p>
+      <div class="founder-list">
+        <div class="founder-item">
+          <div class="founder-avatar">TS</div>
+          <div>
+            <div class="founder-name">Tewogbade Shakir</div>
+            <div class="founder-research">Researcher, University of Huddersfield</div>
+          </div>
+          <div class="founder-uni">Huddersfield<br>PhD Candidate</div>
+        </div>
+        <div class="founder-item">
+          <div class="founder-avatar">DA</div>
+          <div>
+            <div class="founder-name">Dada Abigael</div>
+            <div class="founder-research">Researcher, University of Huddersfield</div>
+          </div>
+          <div class="founder-uni">Huddersfield<br>PhD Candidate</div>
+        </div>
+        <div class="founder-item">
+          <div class="founder-avatar">OA</div>
+          <div>
+            <div class="founder-name">Ogundipe Adetutu</div>
+            <div class="founder-research">Researcher, University of Huddersfield</div>
+          </div>
+          <div class="founder-uni">Huddersfield<br>PhD Candidate</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="values-grid reveal">
+      <div class="value-card">
+        <div class="value-icon">📖</div>
+        <div class="value-name">Deep Reading</div>
+        <div class="value-desc">We read full articles — not abstracts — and interrogate every section.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔬</div>
+        <div class="value-name">Critical Dialogue</div>
+        <div class="value-desc">We celebrate disagreement, gap-spotting, and rigorous intellectual challenge.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌐</div>
+        <div class="value-name">Inclusivity</div>
+        <div class="value-desc">Open to all career stages — UG, PGT, PGR, ECRs, and practitioners.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⚡</div>
+        <div class="value-name">Knowledge Transfer</div>
+        <div class="value-desc">What we read must inform research, policy, and professional life.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="how-grid-bg"></div>
+  <div class="how-header reveal">
+    <div class="section-label" style="justify-content:center">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">The Process</span>
+      <span class="section-label-line"></span>
+    </div>
+    <h2 class="section-heading">How <em>iRead</em> works</h2>
+    <p>Each month follows a clear democratic process — from nomination to live discussion and beyond.</p>
+  </div>
+  <div class="steps-row reveal">
+    <div class="step-card">
+      <div class="step-num">01</div>
+      <div class="step-icon-ring">📚</div>
+      <h3 class="step-name">Nominate</h3>
+      <p class="step-desc">Members nominate one article each via Google Form. Must include full citation, ABS ranking, and a 2-sentence rationale.</p>
+      <div class="step-connector"></div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">02</div>
+      <div class="step-icon-ring">🗳️</div>
+      <h3 class="step-name">Vote</h3>
+      <p class="step-desc">A curated shortlist of 5 goes to community vote via WhatsApp and LinkedIn polls. Top 3 articles are selected.</p>
+      <div class="step-connector"></div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">03</div>
+      <div class="step-icon-ring">🎙️</div>
+      <h3 class="step-name">Listen</h3>
+      <p class="step-desc">A podcast episode drops mid-month: 20 minutes covering aims, methodology, findings, gaps, and policy implications.</p>
+      <div class="step-connector"></div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">04</div>
+      <div class="step-icon-ring">💬</div>
+      <h3 class="step-name">Debate</h3>
+      <p class="step-desc">Last Thursday of the month: a 90-minute live virtual session. Reviewers present. Community debates. Gaps are mapped.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VOTE -->
+<section id="vote">
+  <div class="vote-layout">
+    <div class="vote-header-col reveal">
+      <div class="section-label">
+        <span class="section-label-line"></span>
+        <span class="section-label-text">Monthly Vote</span>
+      </div>
+      <h2 class="section-heading">This month's <em>reading candidates</em></h2>
+      <p class="vote-desc">Every month, the community nominates and votes on the articles we read together. Democracy drives the reading list.</p>
+
+      <div class="vote-timeline">
+        <div class="vt-item">
+          <div class="vt-dot">1</div>
+          <div class="vt-content">
+            <div class="vt-week">Week 1</div>
+            <div class="vt-action">Nomination window opens</div>
+            <div class="vt-sub">Submit via Google Form — full citation required</div>
+          </div>
+        </div>
+        <div class="vt-item">
+          <div class="vt-dot">2</div>
+          <div class="vt-content">
+            <div class="vt-week">Week 2</div>
+            <div class="vt-action">Shortlist & community vote</div>
+            <div class="vt-sub">Top 5 curated — WhatsApp + LinkedIn poll (5 days)</div>
+          </div>
+        </div>
+        <div class="vt-item">
+          <div class="vt-dot">3</div>
+          <div class="vt-content">
+            <div class="vt-week">Week 2–3</div>
+            <div class="vt-action">Winners announced + podcast drops</div>
+            <div class="vt-sub">Top 3 revealed · Reading framework sent to all members</div>
+          </div>
+        </div>
+        <div class="vt-item">
+          <div class="vt-dot">4</div>
+          <div class="vt-content">
+            <div class="vt-week">Last Thursday</div>
+            <div class="vt-action">Live reading session</div>
+            <div class="vt-sub">90-min virtual session · 6:00 PM GMT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="vote-panel">
+        <div class="vote-panel-header">
+          <h3 class="vote-panel-title">Current Month — Live Vote</h3>
+          <span class="vote-badge">Voting Open</span>
+        </div>
+        <p class="vote-subtitle">Select your preferred article · One vote per member</p>
+
+        <div class="candidate-list" id="candidates">
+          <div class="candidate" onclick="selectCandidate(0)" data-votes="42">
+            <div class="candidate-fill" style="width:54%"></div>
+            <div class="candidate-inner">
+              <div class="candidate-header">
+                <span class="candidate-title">AI-Enabled Decision Making in Supply Chain Networks: A Systematic Review</span>
+                <span class="candidate-pct">54%</span>
+              </div>
+              <div class="candidate-journal">J. of Operations Management · ABS 4★ · 2024</div>
+              <div class="candidate-bar"><div class="candidate-bar-fill" style="width:54%"></div></div>
+            </div>
+          </div>
+          <div class="candidate" onclick="selectCandidate(1)" data-votes="31">
+            <div class="candidate-fill" style="width:32%"></div>
+            <div class="candidate-inner">
+              <div class="candidate-header">
+                <span class="candidate-title">Algorithmic Management and Worker Autonomy in Gig Economy Platforms</span>
+                <span class="candidate-pct">32%</span>
+              </div>
+              <div class="candidate-journal">Work, Employment & Society · ABS 3 · 2023</div>
+              <div class="candidate-bar"><div class="candidate-bar-fill" style="width:32%"></div></div>
+            </div>
+          </div>
+          <div class="candidate" onclick="selectCandidate(2)" data-votes="18">
+            <div class="candidate-fill" style="width:14%"></div>
+            <div class="candidate-inner">
+              <div class="candidate-header">
+                <span class="candidate-title">Transformational Leadership and Team Performance in Hybrid Work Settings</span>
+                <span class="candidate-pct">14%</span>
+              </div>
+              <div class="candidate-journal">Leadership Quarterly · ABS 4★ · 2024</div>
+              <div class="candidate-bar"><div class="candidate-bar-fill" style="width:14%"></div></div>
+            </div>
+          </div>
+          <div class="candidate" onclick="selectCandidate(3)" data-votes="0">
+            <div class="candidate-fill" style="width:0%"></div>
+            <div class="candidate-inner">
+              <div class="candidate-header">
+                <span class="candidate-title">Resilience Strategies in Post-COVID Global Supply Chains: Evidence from UK Firms</span>
+                <span class="candidate-pct">0%</span>
+              </div>
+              <div class="candidate-journal">Supply Chain Management Int'l · ABS 3 · 2024</div>
+              <div class="candidate-bar"><div class="candidate-bar-fill" style="width:0%"></div></div>
+            </div>
+          </div>
+          <div class="candidate" onclick="selectCandidate(4)" data-votes="0">
+            <div class="candidate-fill" style="width:0%"></div>
+            <div class="candidate-inner">
+              <div class="candidate-header">
+                <span class="candidate-title">Human–AI Collaboration in Knowledge Work: A Mixed-Methods Investigation</span>
+                <span class="candidate-pct">0%</span>
+              </div>
+              <div class="candidate-journal">MIS Quarterly · ABS 4★ · 2025</div>
+              <div class="candidate-bar"><div class="candidate-bar-fill" style="width:0%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="vote-btn" id="vote-btn" onclick="castVote()" disabled>
+          Select an Article to Vote
+        </button>
+        <p class="vote-info">78 members have voted · Closes in 3 days</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="events-header reveal">
+    <div class="section-label">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Events</span>
+    </div>
+    <h2 class="section-heading">Where we <em>come alive</em></h2>
+  </div>
+
+  <div class="events-grid reveal">
+    <div class="event-card featured">
+      <span class="event-type-badge badge-annual">Annual Flagship</span>
+      <div class="event-date">
+        <span class="event-day">14</span>
+        <div>
+          <div class="event-month-year">June</div>
+          <div class="event-month-year">2026</div>
+        </div>
+      </div>
+      <h3 class="event-title">The iRead Annual Symposium</h3>
+      <p class="event-desc">A full-day hybrid academic symposium at the University of Huddersfield featuring 2–3 invited professors, doctoral showcase presentations, a collaborative gap-mapping workshop, and annual awards. Free for students.</p>
+      <div class="event-meta">
+        <span class="event-tag">Hybrid · In-Person + Virtual</span>
+        <span class="event-tag">9:00 AM – 5:00 PM</span>
+        <span class="event-tag">UoH Business School</span>
+        <span class="event-tag">Free for Students</span>
+      </div>
+      <button class="event-register-btn" onclick="showToast('Annual Symposium registration opens in April 2026!')">Register Interest →</button>
+    </div>
+    <div class="event-card">
+      <span class="event-type-badge badge-monthly">Monthly Session</span>
+      <div class="event-date">
+        <span class="event-day">30</span>
+        <div>
+          <div class="event-month-year">Jan</div>
+          <div class="event-month-year" style="color:var(--gold)">2026</div>
+        </div>
+      </div>
+      <h3 class="event-title">January Reading Session</h3>
+      <p class="event-desc">90-minute virtual session. Reviewer presentations, live critical discussion, and research gap spotlight. All welcome.</p>
+      <div class="event-meta">
+        <span class="event-tag">Virtual · Teams</span>
+        <span class="event-tag">6:00 PM GMT</span>
+        <span class="event-tag">Free</span>
+      </div>
+      <button class="event-register-btn" onclick="showToast('You\'ve been registered for the January session!')">Register Free →</button>
+    </div>
+    <div class="event-card">
+      <span class="event-type-badge badge-podcast">Podcast</span>
+      <div class="event-date">
+        <span class="event-day">15</span>
+        <div>
+          <div class="event-month-year">Jan</div>
+          <div class="event-month-year" style="color:var(--sage)">2026</div>
+        </div>
+      </div>
+      <h3 class="event-title">The Reading Room — Ep. 1</h3>
+      <p class="event-desc">Monthly podcast deep-dive. 20 minutes covering aims, methodology, findings, gaps, and policy implications of the voted article.</p>
+      <div class="event-meta">
+        <span class="event-tag">Spotify</span>
+        <span class="event-tag">Apple Podcasts</span>
+        <span class="event-tag">~20 mins</span>
+      </div>
+      <button class="event-register-btn" onclick="showToast('Podcast drops on the 15th of every month — subscribe on Spotify!')">Listen on Spotify →</button>
+    </div>
+    <div class="event-card">
+      <span class="event-type-badge badge-monthly">Monthly Session</span>
+      <div class="event-date">
+        <span class="event-day">27</span>
+        <div>
+          <div class="event-month-year">Feb</div>
+          <div class="event-month-year" style="color:var(--gold)">2026</div>
+        </div>
+      </div>
+      <h3 class="event-title">February Reading Session</h3>
+      <p class="event-desc">This month's voted article takes centre stage. Full 13-dimension framework discussion with live Mentimeter polls.</p>
+      <div class="event-meta">
+        <span class="event-tag">Virtual · Teams</span>
+        <span class="event-tag">6:00 PM GMT</span>
+        <span class="event-tag">Free</span>
+      </div>
+      <button class="event-register-btn" onclick="showToast('Registration for Feb session opens after January\'s session!')">Register Free →</button>
+    </div>
+  </div>
+</section>
+
+<!-- SESSION FORMAT -->
+<section id="session">
+  <div class="session-left reveal">
+    <div class="section-label">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Session Format</span>
+    </div>
+    <h2 class="section-heading">90 minutes of <em>pure intellectual engagement</em></h2>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;line-height:1.75;color:var(--ink-soft);margin-top:1rem;">Not a seminar. Not a lecture. A structured, energetic debate where every voice matters and every gap spotted is a potential PhD contribution.</p>
+    <div class="session-clock">
+      <div class="clock-ring">
+        <div class="clock-center">
+          <div class="clock-num">90</div>
+          <div class="clock-unit">Minutes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="reveal">
+    <div class="session-agenda">
+      <div class="agenda-item">
+        <span class="agenda-time">00:00</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Welcome & Article Introduction</div>
+          <div class="agenda-desc">Facilitator opens, introduces the article and authors. Brief housekeeping.</div>
+        </div>
+        <span class="agenda-duration">5 min</span>
+      </div>
+      <div class="agenda-item">
+        <span class="agenda-time">00:05</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Warm-Up Round</div>
+          <div class="agenda-desc">Each attendee shares in one sentence: what they found most surprising in the article.</div>
+        </div>
+        <span class="agenda-duration">10 min</span>
+      </div>
+      <div class="agenda-item">
+        <span class="agenda-time">00:15</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Reviewer Presentation A</div>
+          <div class="agenda-desc">Aims, objectives, theoretical framework, and methodology. Volunteer reviewer presents using the iRead framework.</div>
+        </div>
+        <span class="agenda-duration">15 min</span>
+      </div>
+      <div class="agenda-item">
+        <span class="agenda-time">00:30</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Reviewer Presentation B</div>
+          <div class="agenda-desc">Key findings, theoretical and practical contributions, policy implications.</div>
+        </div>
+        <span class="agenda-duration">15 min</span>
+      </div>
+      <div class="agenda-item">
+        <span class="agenda-time">00:45</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Open Critical Discussion</div>
+          <div class="agenda-desc">Strengths, weaknesses, research gaps. Live Padlet board. Facilitator keeps debate flowing. Disagreement welcomed.</div>
+        </div>
+        <span class="agenda-duration">25 min</span>
+      </div>
+      <div class="agenda-item">
+        <span class="agenda-time">01:10</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Rate the Paper — Live Poll</div>
+          <div class="agenda-desc">Live Mentimeter poll: score 1–10. Community verdict: Extend, Replicate, or Reject?</div>
+        </div>
+        <span class="agenda-duration">10 min</span>
+      </div>
+      <div class="agenda-item">
+        <span class="agenda-time">01:20</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Research Gap Spotlight</div>
+          <div class="agenda-desc">Members pitch one PhD-worthy gap they spotted. Lightning round — 30 seconds each.</div>
+        </div>
+        <span class="agenda-duration">8 min</span>
+      </div>
+      <div class="agenda-item">
+        <span class="agenda-time">01:28</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Wrap-Up & Next Month Reveal</div>
+          <div class="agenda-desc">Next month's voted journal revealed. Best Question of the Night announced.</div>
+        </div>
+        <span class="agenda-duration">2 min</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- READING FRAMEWORK -->
+<section id="framework">
+  <div class="how-grid-bg"></div>
+  <div class="framework-header reveal">
+    <div class="section-label" style="justify-content:center">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Reading Framework</span>
+      <span class="section-label-line"></span>
+    </div>
+    <h2 class="section-heading">The <em>13-Dimension</em> Review Framework</h2>
+    <p>Every article reviewed through the same rigorous lens. Two volunteer reviewers prepare this before each session.</p>
+  </div>
+  <div class="framework-grid reveal">
+    <div class="fw-card">
+      <div class="fw-num">01</div>
+      <div class="fw-dimension">Bibliographic Details</div>
+      <div class="fw-question">Authors, year, journal, ABS ranking, DOI, citation count.</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-num">02</div>
+      <div class="fw-dimension">Aims & Objectives</div>
+      <div class="fw-question">What does the paper set out to do? Are the aims clearly stated and achieved?</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-num">03</div>
+      <div class="fw-dimension">Research Questions</div>
+      <div class="fw-question">What questions/hypotheses are addressed? Are they novel and well-grounded?</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-num">04</div>
+      <div class="fw-dimension">Theoretical Framework</div>
+      <div class="fw-question">Which theories/models are used? Is the theoretical grounding appropriate?</div>
+    </div>
+    <div class="fw-card highlight">
+      <div class="fw-num">05</div>
+      <div class="fw-dimension">Methodology</div>
+      <div class="fw-question">Research design, data collection, sample, analytical technique — all justified?</div>
+    </div>
+    <div class="fw-card highlight">
+      <div class="fw-num">06</div>
+      <div class="fw-dimension">Key Findings</div>
+      <div class="fw-question">Main results — what is surprising, expected, or contested?</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-num">07</div>
+      <div class="fw-dimension">Theoretical Contributions</div>
+      <div class="fw-question">Does this extend, challenge, or merely replicate existing theory?</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-num">08</div>
+      <div class="fw-dimension">Practical Contributions</div>
+      <div class="fw-question">What do managers and leaders gain? Is it actionable?</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-num">09</div>
+      <div class="fw-dimension">Policy Implications</div>
+      <div class="fw-question">What does this suggest for governments, regulators, institutions — UK or global?</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-num">10</div>
+      <div class="fw-dimension">Strengths</div>
+      <div class="fw-question">What does this paper do particularly well — rigour, originality, clarity?</div>
+    </div>
+    <div class="fw-card highlight">
+      <div class="fw-num">11</div>
+      <div class="fw-dimension">Weaknesses & Limitations</div>
+      <div class="fw-question">Blind spots, methodological flaws, generalisation issues, potential bias?</div>
+    </div>
+    <div class="fw-card highlight">
+      <div class="fw-num">12</div>
+      <div class="fw-dimension">Research Gaps</div>
+      <div class="fw-question">What future research is called for? What PhD-worthy gaps do YOU spot?</div>
+    </div>
+    <div class="fw-card" style="grid-column: span 2; background: rgba(184,134,11,.1);">
+      <div class="fw-num">13</div>
+      <div class="fw-dimension">Community Verdict</div>
+      <div class="fw-question">Score 1–10. Must-read or skip? Would you cite it? Group consensus vs. dissent — all documented.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CHANNELS -->
+<section id="channels">
+  <div class="channels-header reveal">
+    <div class="section-label">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Digital Channels</span>
+    </div>
+    <h2 class="section-heading">Where we <em>connect & share</em></h2>
+  </div>
+  <div class="channels-flex reveal">
+    <div class="channel-row">
+      <div class="channel-icon">💬</div>
+      <div>
+        <div class="channel-name">WhatsApp Group</div>
+        <div class="channel-purpose">Real-time community chat</div>
+      </div>
+      <div class="channel-desc">Event reminders, quick polls, daily reading nudges, member discussions. Core members (max 256). Pinned with monthly journal & house rules.</div>
+      <span class="channel-freq">Daily</span>
+    </div>
+    <div class="channel-row">
+      <div class="channel-icon">📢</div>
+      <div>
+        <div class="channel-name">WhatsApp Channel</div>
+        <div class="channel-purpose">Broadcast announcements</div>
+      </div>
+      <div class="channel-desc">One-way broadcast for monthly journal reveals, event links, podcast drops. Wider subscriber base — no noise.</div>
+      <span class="channel-freq">3–4×/month</span>
+    </div>
+    <div class="channel-row">
+      <div class="channel-icon">💼</div>
+      <div>
+        <div class="channel-name">LinkedIn Page + Newsletter</div>
+        <div class="channel-purpose">Professional visibility & digest</div>
+      </div>
+      <div class="channel-desc">Session summaries, member spotlights, journal insights, post-event recaps. Monthly newsletter with key findings and policy notes.</div>
+      <span class="channel-freq">3×/week</span>
+    </div>
+    <div class="channel-row">
+      <div class="channel-icon">🎙️</div>
+      <div>
+        <div class="channel-name">The Reading Room Podcast</div>
+        <div class="channel-purpose">Audio journal deep-dives</div>
+      </div>
+      <div class="channel-desc">15–25 min monthly episode on the voted article. Aims, methodology, findings, gaps, policy implications — for commuters and busy scholars.</div>
+      <span class="channel-freq">Monthly</span>
+    </div>
+    <div class="channel-row">
+      <div class="channel-icon">🖥️</div>
+      <div>
+        <div class="channel-name">Microsoft Teams / Zoom</div>
+        <div class="channel-purpose">Virtual live events</div>
+      </div>
+      <div class="channel-desc">Monthly reading sessions and the Annual Symposium virtual stream. Recorded and uploaded to members-only Google Drive within 48 hours.</div>
+      <span class="channel-freq">Monthly</span>
+    </div>
+    <div class="channel-row">
+      <div class="channel-icon">📁</div>
+      <div>
+        <div class="channel-name">Google Drive / Notion</div>
+        <div class="channel-purpose">Document repository & dashboard</div>
+      </div>
+      <div class="channel-desc">Members-only access. Reading frameworks, session notes, slide decks, reading challenge leaderboard, annual community report.</div>
+      <span class="channel-freq">Ongoing</span>
+    </div>
+  </div>
+</section>
+
+<!-- ANNUAL SYMPOSIUM -->
+<section id="symposium">
+  <div class="how-grid-bg"></div>
+  <div class="symp-inner">
+    <div class="symp-grid">
+      <div class="symp-left reveal">
+        <div class="section-label">
+          <span class="section-label-line" style="background:rgba(184,134,11,.6)"></span>
+          <span class="section-label-text">Annual Event</span>
+        </div>
+        <h2 class="section-heading">The iRead <em>Annual Symposium</em></h2>
+        <p>A full-day hybrid academic event at the University of Huddersfield. Invited professors, doctoral researcher showcases, collaborative gap-mapping, and the annual community awards.</p>
+        <div class="symp-details">
+          <div class="symp-detail">
+            <span class="symp-detail-icon">📍</span>
+            <div>
+              <div class="symp-detail-label">Venue</div>
+              <div class="symp-detail-val">University of Huddersfield, Business School — Hybrid (In-Person + Virtual)</div>
+            </div>
+          </div>
+          <div class="symp-detail">
+            <span class="symp-detail-icon">📅</span>
+            <div>
+              <div class="symp-detail-label">When</div>
+              <div class="symp-detail-val">June 2026 · Full Day 9:00 AM – 5:00 PM</div>
+            </div>
+          </div>
+          <div class="symp-detail">
+            <span class="symp-detail-icon">🎓</span>
+            <div>
+              <div class="symp-detail-label">Keynote Speakers</div>
+              <div class="symp-detail-val">2–3 invited UK professors from ABS 4 / 4★ journals</div>
+            </div>
+          </div>
+          <div class="symp-detail">
+            <span class="symp-detail-icon">🏷️</span>
+            <div>
+              <div class="symp-detail-label">Cost</div>
+              <div class="symp-detail-val">Free for students · £15–20 for non-student in-person</div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-primary" onclick="showToast('We\'ll notify you when Symposium registration opens!')">Register Interest</button>
+      </div>
+
+      <div class="reveal">
+        <p style="font-size:.65rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;">Full Day Programme</p>
+        <div class="symp-programme">
+          <div class="prog-item">
+            <span class="prog-time">08:30</span>
+            <div class="prog-activity"><strong>Registration</strong> — Coffee & Networking</div>
+          </div>
+          <div class="prog-item">
+            <span class="prog-time">09:00</span>
+            <div class="prog-activity"><strong>Welcome Address</strong> — Founding Directors + UoH Representative</div>
+          </div>
+          <div class="prog-item">
+            <span class="prog-time">09:30</span>
+            <div class="prog-activity"><strong>Keynote 1</strong> — Invited Professor: "The Future of [Theme] Research: Where Are the Gaps?"</div>
+          </div>
+          <div class="prog-item">
+            <span class="prog-time">10:30</span>
+            <div class="prog-activity"><strong>Coffee Break</strong> & Networking</div>
+          </div>
+          <div class="prog-item">
+            <span class="prog-time">11:00</span>
+            <div class="prog-activity"><strong>Year in Review</strong> — Top 5 journals reviewed: highlights, debates, gaps</div>
+          </div>
+          <div class="prog-item">
+            <span class="prog-time">12:00</span>
+            <div class="prog-activity"><strong>Keynote 2</strong> — Invited Professor: "Bridging Theory and Practice"</div>
+          </div>
+          <div class="prog-item">
+            <span class="prog-time">12:45</span>
+            <div class="prog-activity"><strong>Lunch</strong> & Informal Networking</div>
+          </div>
+          <div class="prog-item">
+            <span class="prog-time">13:45</span>
+            <div class="prog-activity"><strong>Doctoral Showcase</strong> — 3–4 members present research linked to the year's journals</div>
+          </div>
+          <div class="prog-item">
+            <span class="prog-time">14:30</span>
+            <div class="prog-activity"><strong>Keynote 3</strong> — Senior Practitioner: Policy and Industry Implications</div>
+          </div>
+          <div class="prog-item">
+            <span class="prog-time">15:30</span>
+            <div class="prog-activity"><strong>Gap Mapping Workshop</strong> — Groups identify research gaps from the year's reading list — community white paper</div>
+          </div>
+          <div class="prog-item">
+            <span class="prog-time">16:30</span>
+            <div class="prog-activity"><strong>Awards Ceremony</strong> & Closing Remarks</div>
+          </div>
+          <div class="prog-item">
+            <span class="prog-time">19:00</span>
+            <div class="prog-activity"><strong>Optional Networking Dinner</strong> — Local restaurant, self-funded</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="join">
+  <div class="join-inner">
+    <div class="section-label" style="justify-content:center">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Join the Community</span>
+      <span class="section-label-line"></span>
+    </div>
+    <h2 class="join-heading reveal">Start reading.<br><em>Start leading.</em></h2>
+    <p class="join-sub reveal">Free to join. Open to all UK doctoral and postgraduate researchers. The only requirement: you still believe reading matters.</p>
+
+    <div class="join-form reveal">
+      <input type="email" class="join-input" id="join-email" placeholder="Your institutional email address">
+      <button class="btn-primary" onclick="handleJoin()">
+        <span>Join Free</span>
+        <span>→</span>
+      </button>
+    </div>
+    <p style="font-size:.72rem;color:var(--ink-soft);margin-top:.7rem;" class="reveal">No spam. Monthly journal announcements + event invites only.</p>
+
+    <div class="join-channels reveal">
+      <button class="join-channel" onclick="showToast('Join our WhatsApp community group!')">
+        <span class="join-channel-icon">💬</span>
+        <span>WhatsApp Group</span>
+      </button>
+      <button class="join-channel" onclick="showToast('Follow our WhatsApp Channel for broadcasts!')">
+        <span class="join-channel-icon">📢</span>
+        <span>WhatsApp Channel</span>
+      </button>
+      <button class="join-channel" onclick="showToast('Follow iRead on LinkedIn!')">
+        <span class="join-channel-icon">💼</span>
+        <span>LinkedIn</span>
+      </button>
+      <button class="join-channel" onclick="showToast('Subscribe to The Reading Room on Spotify!')">
+        <span class="join-channel-icon">🎙️</span>
+        <span>Podcast</span>
+      </button>
+      <button class="join-channel" onclick="showToast('Subscribe to our monthly LinkedIn Newsletter!')">
+        <span class="join-channel-icon">📰</span>
+        <span>Newsletter</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">iRead</div>
+    <div class="footer-tagline">"Read Deeply. Think Critically. Lead Boldly."</div>
+  </div>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#events">Events</a>
+    <a href="#session">Sessions</a>
+    <a href="#symposium">Symposium</a>
+    <a href="#join">Join</a>
+  </div>
+  <div class="footer-copy">© 2025 iRead · University of Huddersfield</div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="src/main.js"></script>
+</body>
+</html>
