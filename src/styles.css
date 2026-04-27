@@ -48,8 +48,19 @@ nav {
 nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,.08); }
 
 .nav-brand {
-  display: flex; align-items: baseline; gap: 10px;
+  display: flex; align-items: center; gap: 10px;
   text-decoration: none;
+}
+.nav-brand::before {
+  content: '';
+  display: block;
+  width: 26px;
+  height: 22px;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='22' viewBox='0 0 26 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 3C10 2 6 1.8 3 2.8L3 18.2C6 17.2 10 17.4 13 18.4Z' stroke='%23B8860B' stroke-width='1.3' fill='%23B8860B' fill-opacity='0.12'/%3E%3Cpath d='M13 3C16 2 20 1.8 23 2.8L23 18.2C20 17.2 16 17.4 13 18.4Z' stroke='%23B8860B' stroke-width='1.3' fill='%23B8860B' fill-opacity='0.12'/%3E%3Cline x1='13' y1='3' x2='13' y2='18.4' stroke='%23B8860B' stroke-width='1.6'/%3E%3Cline x1='5.5' y1='7.5' x2='11' y2='7' stroke='%23B8860B' stroke-width='1' opacity='0.6'/%3E%3Cline x1='5.5' y1='11' x2='11' y2='10.5' stroke='%23B8860B' stroke-width='1' opacity='0.6'/%3E%3Cline x1='5.5' y1='14.5' x2='9' y2='14.2' stroke='%23B8860B' stroke-width='1' opacity='0.6'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .nav-brand-text {
   font-family: 'DM Serif Display', serif;
@@ -235,8 +246,51 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,.08); }
   filter: blur(80px);
   opacity: .25;
 }
-.hero-orb-1 { width: 400px; height: 400px; background: var(--navy); top: 10%; left: 20%; }
-.hero-orb-2 { width: 300px; height: 300px; background: var(--gold); bottom: 20%; right: 10%; }
+.hero-orb-1 { width: 400px; height: 400px; background: var(--navy); top: 10%; left: 20%; animation: orbFloat1 20s ease-in-out infinite alternate; }
+.hero-orb-2 { width: 300px; height: 300px; background: var(--gold); bottom: 20%; right: 10%; animation: orbFloat2 26s ease-in-out infinite alternate; }
+
+/* Aurora blobs — pure CSS, no HTML needed */
+.hero-right::before {
+  content: '';
+  position: absolute;
+  width: 650px; height: 550px;
+  background: radial-gradient(ellipse, rgba(27,58,107,0.55) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(70px);
+  top: -15%; left: -5%;
+  z-index: 1;
+  pointer-events: none;
+  animation: auroraBlob1 18s ease-in-out infinite alternate;
+}
+.hero-right::after {
+  content: '';
+  position: absolute;
+  width: 450px; height: 500px;
+  background: radial-gradient(ellipse, rgba(184,134,11,0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(90px);
+  bottom: -10%; right: -5%;
+  z-index: 1;
+  pointer-events: none;
+  animation: auroraBlob2 23s ease-in-out infinite alternate;
+}
+
+@keyframes orbFloat1 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(80px, 60px) scale(1.35); }
+}
+@keyframes orbFloat2 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-60px, -80px) scale(1.25); }
+}
+@keyframes auroraBlob1 {
+  from { transform: translate(0, 0) scale(1) rotate(0deg); }
+  to   { transform: translate(100px, 80px) scale(1.3) rotate(25deg); }
+}
+@keyframes auroraBlob2 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-80px, -60px) scale(1.2); }
+}
 
 .hero-card-stack {
   position: relative; z-index: 2;
