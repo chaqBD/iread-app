@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — iRead</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-brand">
+    <span class="nav-brand-text">iRead</span>
+    <span class="nav-brand-sub">Journal Reading Community</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="nav-active">About</a></li>
+    <li><a href="how-it-works.html">How It Works</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="vote.html">Vote</a></li>
+    <li><a href="join.html" class="nav-cta">Join Now</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="how-it-works.html" onclick="toggleMenu()">How It Works</a>
+  <a href="events.html" onclick="toggleMenu()">Events</a>
+  <a href="vote.html" onclick="toggleMenu()">Vote</a>
+  <a href="join.html" onclick="toggleMenu()">Join Now</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="how-grid-bg"></div>
+  <div class="page-hero-inner">
+    <a href="index.html" class="page-back">← Back to Home</a>
+    <div class="section-label" style="margin-top:1.5rem">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Who We Are</span>
+    </div>
+    <h1 class="page-hero-title">About <em>iRead</em></h1>
+    <p class="page-hero-desc">Three doctoral researchers. One shared conviction: in the age of AI, those who actually read will lead.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-left reveal">
+    <div class="section-label">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Our Mission</span>
+    </div>
+    <h2 class="section-heading">A community built on <em>intellectual rigour</em></h2>
+    <div class="mission-box">
+      <p class="mission-text">To cultivate a UK-wide community of doctoral researchers who engage rigorously with management literature — resisting intellectual shortcuts, championing deep reading, and generating critical dialogue that advances theory and practice.</p>
+    </div>
+  </div>
+  <div class="about-right">
+    <p class="about-intro reveal">
+      Three doctoral researchers at the University of Huddersfield — specialising in AI Supply Chain Analytics, Leadership, and Algorithmic Work — founded iRead because they believe that in an era where AI summarises everything, the researchers who actually read will be the ones who discover what AI cannot.
+    </p>
+
+    <div class="founders-section reveal">
+      <p class="founders-label">Founding Researchers</p>
+      <div class="founder-list">
+        <div class="founder-item">
+          <div class="founder-avatar">TS</div>
+          <div>
+            <div class="founder-name">Tewogbade Shakir</div>
+            <div class="founder-research">Researcher, University of Huddersfield</div>
+          </div>
+          <div class="founder-uni">Huddersfield<br>PhD Candidate</div>
+        </div>
+        <div class="founder-item">
+          <div class="founder-avatar">DA</div>
+          <div>
+            <div class="founder-name">Dada Abigail</div>
+            <div class="founder-research">Researcher, University of Huddersfield</div>
+          </div>
+          <div class="founder-uni">Huddersfield<br>PhD Candidate</div>
+        </div>
+        <div class="founder-item">
+          <div class="founder-avatar">OA</div>
+          <div>
+            <div class="founder-name">Ogundipe Adetutu</div>
+            <div class="founder-research">Researcher, University of Huddersfield</div>
+          </div>
+          <div class="founder-uni">Huddersfield<br>PhD Candidate</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="values-grid reveal">
+      <div class="value-card">
+        <div class="value-icon">📖</div>
+        <div class="value-name">Deep Reading</div>
+        <div class="value-desc">We read full articles — not abstracts — and interrogate every section.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔬</div>
+        <div class="value-name">Critical Dialogue</div>
+        <div class="value-desc">We celebrate divergence, gap-spotting, and rigorous intellectual challenge.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌐</div>
+        <div class="value-name">Inclusivity</div>
+        <div class="value-desc">Open to all career stages — UG, PGT, PGR, ECRs, and practitioners.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⚡</div>
+        <div class="value-name">Knowledge Transfer</div>
+        <div class="value-desc">What we read must inform research, policy, and professional life.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHANNELS -->
+<section id="channels">
+  <div class="channels-header reveal">
+    <div class="section-label">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Digital Channels</span>
+    </div>
+    <h2 class="section-heading">Where we <em>connect & share</em></h2>
+  </div>
+  <div class="channels-flex reveal">
+    <div class="channel-row">
+      <div class="channel-icon">💬</div>
+      <div>
+        <div class="channel-name">WhatsApp Group</div>
+        <div class="channel-purpose">Real-time community chat</div>
+      </div>
+      <div class="channel-desc">Event reminders, quick polls, daily reading nudges, member discussions. Core members (max 256). Pinned with monthly journal & house rules.</div>
+      <span class="channel-freq">Daily</span>
+    </div>
+    <div class="channel-row">
+      <div class="channel-icon">📢</div>
+      <div>
+        <div class="channel-name">WhatsApp Channel</div>
+        <div class="channel-purpose">Broadcast announcements</div>
+      </div>
+      <div class="channel-desc">One-way broadcast for monthly journal reveals, event links, podcast drops. Wider subscriber base — no noise.</div>
+      <span class="channel-freq">3–4×/month</span>
+    </div>
+    <div class="channel-row">
+      <div class="channel-icon">💼</div>
+      <div>
+        <div class="channel-name">LinkedIn Page + Newsletter</div>
+        <div class="channel-purpose">Professional visibility & digest</div>
+      </div>
+      <div class="channel-desc">Session summaries, member spotlights, journal insights, post-event recaps. Monthly newsletter with key findings and policy notes.</div>
+      <span class="channel-freq">3×/week</span>
+    </div>
+    <div class="channel-row">
+      <div class="channel-icon">🎙️</div>
+      <div>
+        <div class="channel-name">The Reading Room Podcast</div>
+        <div class="channel-purpose">Audio journal deep-dives</div>
+      </div>
+      <div class="channel-desc">15–25 min monthly episode on the voted article. Aims, methodology, findings, gaps, policy implications — for commuters and busy scholars.</div>
+      <span class="channel-freq">Monthly</span>
+    </div>
+    <div class="channel-row">
+      <div class="channel-icon">🖥️</div>
+      <div>
+        <div class="channel-name">Microsoft Teams / Zoom</div>
+        <div class="channel-purpose">Virtual live events</div>
+      </div>
+      <div class="channel-desc">Monthly reading sessions and the Annual Symposium virtual stream. Recorded and uploaded to members-only Google Drive within 48 hours.</div>
+      <span class="channel-freq">Monthly</span>
+    </div>
+    <div class="channel-row">
+      <div class="channel-icon">📁</div>
+      <div>
+        <div class="channel-name">Google Drive / Notion</div>
+        <div class="channel-purpose">Document repository & dashboard</div>
+      </div>
+      <div class="channel-desc">Members-only access. Reading frameworks, session notes, slide decks, reading challenge leaderboard, annual community report.</div>
+      <span class="channel-freq">Ongoing</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="page-cta">
+  <h2 class="page-cta-heading reveal">Ready to <em>join the community?</em></h2>
+  <div class="reveal">
+    <a href="join.html" class="btn-primary">Join Free →</a>
+    <a href="how-it-works.html" class="btn-outline" style="margin-left:1rem">How It Works</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">iRead</div>
+    <div class="footer-tagline">"Read Deeply. Think Critically. Lead Boldly."</div>
+  </div>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="events.html">Events</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="vote.html">Vote</a>
+    <a href="join.html">Join</a>
+  </div>
+  <div class="footer-copy">© 2025 iRead · University of Huddersfield</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="src/main.js"></script>
+</body>
+</html>

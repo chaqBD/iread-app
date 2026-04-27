@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works — iRead</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-brand">
+    <span class="nav-brand-text">iRead</span>
+    <span class="nav-brand-sub">Journal Reading Community</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="how-it-works.html" class="nav-active">How It Works</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="vote.html">Vote</a></li>
+    <li><a href="join.html" class="nav-cta">Join Now</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="how-it-works.html" onclick="toggleMenu()">How It Works</a>
+  <a href="events.html" onclick="toggleMenu()">Events</a>
+  <a href="vote.html" onclick="toggleMenu()">Vote</a>
+  <a href="join.html" onclick="toggleMenu()">Join Now</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="how-grid-bg"></div>
+  <div class="page-hero-inner">
+    <a href="index.html" class="page-back">← Back to Home</a>
+    <div class="section-label" style="margin-top:1.5rem">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">The Process</span>
+    </div>
+    <h1 class="page-hero-title">How <em>iRead</em> Works</h1>
+    <p class="page-hero-desc">Each month follows a clear democratic process — from nomination to live discussion and beyond. Here is everything from the four-step cycle to the 13-dimension review framework.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="how-grid-bg"></div>
+  <div class="how-header reveal">
+    <div class="section-label" style="justify-content:center">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Monthly Cycle</span>
+      <span class="section-label-line"></span>
+    </div>
+    <h2 class="section-heading">The four-step <em>reading cycle</em></h2>
+    <p>Each month follows a clear democratic process — from nomination to live discussion and beyond.</p>
+  </div>
+  <div class="steps-row reveal">
+    <div class="step-card">
+      <div class="step-num">01</div>
+      <div class="step-icon-ring">📚</div>
+      <h3 class="step-name">Nominate</h3>
+      <p class="step-desc">Members nominate one article each via Google Form. Must include full citation, ABS ranking, and a 2-sentence rationale.</p>
+      <div class="step-connector"></div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">02</div>
+      <div class="step-icon-ring">🗳️</div>
+      <h3 class="step-name">Vote</h3>
+      <p class="step-desc">A curated shortlist of 5 goes to community vote via WhatsApp and LinkedIn polls. Top 3 articles are selected.</p>
+      <div class="step-connector"></div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">03</div>
+      <div class="step-icon-ring">🎙️</div>
+      <h3 class="step-name">Listen</h3>
+      <p class="step-desc">A podcast episode drops mid-month: 20 minutes covering aims, methodology, findings, gaps, and policy implications.</p>
+      <div class="step-connector"></div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">04</div>
+      <div class="step-icon-ring">💬</div>
+      <h3 class="step-name">Debate</h3>
+      <p class="step-desc">Last Thursday of the month: a 90-minute live virtual session. Reviewers present. Community debates. Gaps are mapped.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SESSION FORMAT -->
+<section id="session">
+  <div class="session-left reveal">
+    <div class="section-label">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Session Format</span>
+    </div>
+    <h2 class="section-heading">90 minutes of <em>pure intellectual engagement</em></h2>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;line-height:1.75;color:var(--ink-soft);margin-top:1rem;">Not a seminar. Not a lecture. A structured, energetic debate where every voice matters and every gap spotted is a potential PhD contribution.</p>
+    <div class="session-clock">
+      <div class="clock-ring">
+        <div class="clock-center">
+          <div class="clock-num">90</div>
+          <div class="clock-unit">Minutes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="reveal">
+    <div class="session-agenda">
+      <div class="agenda-item">
+        <span class="agenda-time">00:00</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Welcome & Article Introduction</div>
+          <div class="agenda-desc">Facilitator opens, introduces the article and authors. Brief housekeeping.</div>
+        </div>
+        <span class="agenda-duration">5 min</span>
+      </div>
+      <div class="agenda-item">
+        <span class="agenda-time">00:05</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Warm-Up Round</div>
+          <div class="agenda-desc">Each attendee shares in one sentence: what they found most surprising in the article.</div>
+        </div>
+        <span class="agenda-duration">10 min</span>
+      </div>
+      <div class="agenda-item">
+        <span class="agenda-time">00:15</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Reviewer Presentation A</div>
+          <div class="agenda-desc">Aims, objectives, theoretical framework, and methodology. Volunteer reviewer presents using the iRead framework.</div>
+        </div>
+        <span class="agenda-duration">15 min</span>
+      </div>
+      <div class="agenda-item">
+        <span class="agenda-time">00:30</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Reviewer Presentation B</div>
+          <div class="agenda-desc">Key findings, theoretical and practical contributions, policy implications.</div>
+        </div>
+        <span class="agenda-duration">15 min</span>
+      </div>
+      <div class="agenda-item">
+        <span class="agenda-time">00:45</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Open Critical Discussion</div>
+          <div class="agenda-desc">Strengths, weaknesses, research gaps. Live Padlet board. Facilitator keeps debate flowing. Disagreement welcomed.</div>
+        </div>
+        <span class="agenda-duration">25 min</span>
+      </div>
+      <div class="agenda-item">
+        <span class="agenda-time">01:10</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Rate the Paper — Live Poll</div>
+          <div class="agenda-desc">Live Mentimeter poll: score 1–10. Community verdict: Extend, Replicate, or Reject?</div>
+        </div>
+        <span class="agenda-duration">10 min</span>
+      </div>
+      <div class="agenda-item">
+        <span class="agenda-time">01:20</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Research Gap Spotlight</div>
+          <div class="agenda-desc">Members pitch one PhD-worthy gap they spotted. Lightning round — 30 seconds each.</div>
+        </div>
+        <span class="agenda-duration">8 min</span>
+      </div>
+      <div class="agenda-item">
+        <span class="agenda-time">01:28</span>
+        <div class="agenda-content">
+          <div class="agenda-title">Wrap-Up & Next Month Reveal</div>
+          <div class="agenda-desc">Next month's voted journal revealed. Best Question of the Night announced.</div>
+        </div>
+        <span class="agenda-duration">2 min</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- READING FRAMEWORK -->
+<section id="framework">
+  <div class="how-grid-bg"></div>
+  <div class="framework-header reveal">
+    <div class="section-label" style="justify-content:center">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Reading Framework</span>
+      <span class="section-label-line"></span>
+    </div>
+    <h2 class="section-heading">The <em>13-Dimension</em> Review Framework</h2>
+    <p>Every article reviewed through the same rigorous lens. Two volunteer reviewers prepare this before each session.</p>
+  </div>
+  <div class="framework-grid reveal">
+    <div class="fw-card">
+      <div class="fw-num">01</div>
+      <div class="fw-dimension">Bibliographic Details</div>
+      <div class="fw-question">Authors, year, journal, ABS ranking, DOI, citation count.</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-num">02</div>
+      <div class="fw-dimension">Aims & Objectives</div>
+      <div class="fw-question">What does the paper set out to do? Are the aims clearly stated and achieved?</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-num">03</div>
+      <div class="fw-dimension">Research Questions</div>
+      <div class="fw-question">What questions/hypotheses are addressed? Are they novel and well-grounded?</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-num">04</div>
+      <div class="fw-dimension">Theoretical Framework</div>
+      <div class="fw-question">Which theories/models are used? Is the theoretical grounding appropriate?</div>
+    </div>
+    <div class="fw-card highlight">
+      <div class="fw-num">05</div>
+      <div class="fw-dimension">Methodology</div>
+      <div class="fw-question">Research design, data collection, sample, analytical technique — all justified?</div>
+    </div>
+    <div class="fw-card highlight">
+      <div class="fw-num">06</div>
+      <div class="fw-dimension">Key Findings</div>
+      <div class="fw-question">Main results — what is surprising, expected, or contested?</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-num">07</div>
+      <div class="fw-dimension">Theoretical Contributions</div>
+      <div class="fw-question">Does this extend, challenge, or merely replicate existing theory?</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-num">08</div>
+      <div class="fw-dimension">Practical Contributions</div>
+      <div class="fw-question">What do managers and leaders gain? Is it actionable?</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-num">09</div>
+      <div class="fw-dimension">Policy Implications</div>
+      <div class="fw-question">What does this suggest for governments, regulators, institutions — UK or global?</div>
+    </div>
+    <div class="fw-card">
+      <div class="fw-num">10</div>
+      <div class="fw-dimension">Strengths</div>
+      <div class="fw-question">What does this paper do particularly well — rigour, originality, clarity?</div>
+    </div>
+    <div class="fw-card highlight">
+      <div class="fw-num">11</div>
+      <div class="fw-dimension">Weaknesses & Limitations</div>
+      <div class="fw-question">Blind spots, methodological flaws, generalisation issues, potential bias?</div>
+    </div>
+    <div class="fw-card highlight">
+      <div class="fw-num">12</div>
+      <div class="fw-dimension">Research Gaps</div>
+      <div class="fw-question">What future research is called for? What PhD-worthy gaps do YOU spot?</div>
+    </div>
+    <div class="fw-card" style="grid-column: span 2; background: rgba(184,134,11,.1);">
+      <div class="fw-num">13</div>
+      <div class="fw-dimension">Community Verdict</div>
+      <div class="fw-question">Score 1–10. Must-read or skip? Would you cite it? Group consensus vs. dissent — all documented.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="page-cta">
+  <h2 class="page-cta-heading reveal">Ready to <em>join the debate?</em></h2>
+  <div class="reveal">
+    <a href="join.html" class="btn-primary">Join Free →</a>
+    <a href="vote.html" class="btn-outline" style="margin-left:1rem">Vote This Month</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">iRead</div>
+    <div class="footer-tagline">"Read Deeply. Think Critically. Lead Boldly."</div>
+  </div>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="events.html">Events</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="vote.html">Vote</a>
+    <a href="join.html">Join</a>
+  </div>
+  <div class="footer-copy">© 2025 iRead · University of Huddersfield</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join — iRead</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-brand">
+    <span class="nav-brand-text">iRead</span>
+    <span class="nav-brand-sub">Journal Reading Community</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="how-it-works.html">How It Works</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="vote.html">Vote</a></li>
+    <li><a href="join.html" class="nav-cta nav-active">Join Now</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="how-it-works.html" onclick="toggleMenu()">How It Works</a>
+  <a href="events.html" onclick="toggleMenu()">Events</a>
+  <a href="vote.html" onclick="toggleMenu()">Vote</a>
+  <a href="join.html" onclick="toggleMenu()">Join Now</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="how-grid-bg"></div>
+  <div class="page-hero-inner">
+    <a href="index.html" class="page-back">← Back to Home</a>
+    <div class="section-label" style="margin-top:1.5rem">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Join the Community</span>
+    </div>
+    <h1 class="page-hero-title">Start reading.<br><em>Start leading.</em></h1>
+    <p class="page-hero-desc">Free to join. Open to all UK doctoral and postgraduate researchers. The only requirement: you still believe reading matters.</p>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="join">
+  <div class="join-inner">
+    <h2 class="join-heading reveal">One step to <em>join iRead</em></h2>
+    <p class="join-sub reveal">Enter your institutional email and we'll add you to the community. Monthly journal announcements and event invites only — no spam.</p>
+
+    <div class="join-form reveal">
+      <input type="email" class="join-input" id="join-email" placeholder="Your institutional email address">
+      <button class="btn-primary" onclick="handleJoin()">
+        <span>Join Free</span>
+        <span>→</span>
+      </button>
+    </div>
+    <p style="font-size:.72rem;color:var(--ink-soft);margin-top:.7rem;" class="reveal">No spam. Monthly journal announcements + event invites only.</p>
+
+    <div class="join-channels reveal">
+      <button class="join-channel" onclick="showToast('Join our WhatsApp community group!')">
+        <span class="join-channel-icon">💬</span>
+        <span>WhatsApp Group</span>
+      </button>
+      <button class="join-channel" onclick="showToast('Follow our WhatsApp Channel for broadcasts!')">
+        <span class="join-channel-icon">📢</span>
+        <span>WhatsApp Channel</span>
+      </button>
+      <button class="join-channel" onclick="showToast('Follow iRead on LinkedIn!')">
+        <span class="join-channel-icon">💼</span>
+        <span>LinkedIn</span>
+      </button>
+      <button class="join-channel" onclick="showToast('Subscribe to The Reading Room on Spotify!')">
+        <span class="join-channel-icon">🎙️</span>
+        <span>Podcast</span>
+      </button>
+      <button class="join-channel" onclick="showToast('Subscribe to our monthly LinkedIn Newsletter!')">
+        <span class="join-channel-icon">📰</span>
+        <span>Newsletter</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section id="benefits" style="padding:80px 8vw;background:var(--ink);position:relative;">
+  <div class="how-grid-bg"></div>
+  <div class="how-header reveal" style="margin-bottom:3rem;">
+    <div class="section-label" style="justify-content:center">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Member Benefits</span>
+      <span class="section-label-line"></span>
+    </div>
+    <h2 class="section-heading" style="color:var(--cream);text-align:center;">What you get as a <em>member</em></h2>
+  </div>
+  <div class="steps-row reveal">
+    <div class="step-card">
+      <div class="step-num">01</div>
+      <div class="step-icon-ring">🗳️</div>
+      <h3 class="step-name">Nominate & Vote</h3>
+      <p class="step-desc">Shape what the whole community reads. Nominate articles and vote on the monthly shortlist.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">02</div>
+      <div class="step-icon-ring">💬</div>
+      <h3 class="step-name">Live Sessions</h3>
+      <p class="step-desc">Join 90-minute live virtual debates every month. Rigorous discussion, real intellectual challenge.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">03</div>
+      <div class="step-icon-ring">🎙️</div>
+      <h3 class="step-name">Monthly Podcast</h3>
+      <p class="step-desc">Get the voted article broken down in 20 minutes before each session. Perfect for busy researchers.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">04</div>
+      <div class="step-icon-ring">🎓</div>
+      <h3 class="step-name">Annual Symposium</h3>
+      <p class="step-desc">Free entry to the Annual Symposium at UoH. Keynotes, doctoral showcases, and networking.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">iRead</div>
+    <div class="footer-tagline">"Read Deeply. Think Critically. Lead Boldly."</div>
+  </div>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="events.html">Events</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="vote.html">Vote</a>
+    <a href="join.html">Join</a>
+  </div>
+  <div class="footer-copy">© 2025 iRead · University of Huddersfield</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="src/main.js"></script>
+</body>
+</html>

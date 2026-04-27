@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Vote — iRead</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-brand">
+    <span class="nav-brand-text">iRead</span>
+    <span class="nav-brand-sub">Journal Reading Community</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="how-it-works.html">How It Works</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="vote.html" class="nav-active">Vote</a></li>
+    <li><a href="join.html" class="nav-cta">Join Now</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="how-it-works.html" onclick="toggleMenu()">How It Works</a>
+  <a href="events.html" onclick="toggleMenu()">Events</a>
+  <a href="vote.html" onclick="toggleMenu()">Vote</a>
+  <a href="join.html" onclick="toggleMenu()">Join Now</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="how-grid-bg"></div>
+  <div class="page-hero-inner">
+    <a href="index.html" class="page-back">← Back to Home</a>
+    <div class="section-label" style="margin-top:1.5rem">
+      <span class="section-label-line"></span>
+      <span class="section-label-text">Monthly Vote</span>
+    </div>
+    <h1 class="page-hero-title">Democracy drives the <em>reading list</em></h1>
+    <p class="page-hero-desc">Every month, the community nominates and votes on the articles we read together. Cast your vote below.</p>
+  </div>
+</section>
+
+<!-- VOTE -->
+<section id="vote">
+  <div class="vote-layout">
+    <div class="vote-header-col reveal">
+      <div class="section-label">
+        <span class="section-label-line"></span>
+        <span class="section-label-text">How Voting Works</span>
+      </div>
+      <h2 class="section-heading">This month's <em>reading candidates</em></h2>
+      <p class="vote-desc">Every month, the community nominates and votes on the articles we read together. Democracy drives the reading list.</p>
+
+      <div class="vote-timeline">
+        <div class="vt-item">
+          <div class="vt-dot">1</div>
+          <div class="vt-content">
+            <div class="vt-week">Week 1</div>
+            <div class="vt-action">Nomination window opens</div>
+            <div class="vt-sub">Submit via Google Form — full citation required</div>
+          </div>
+        </div>
+        <div class="vt-item">
+          <div class="vt-dot">2</div>
+          <div class="vt-content">
+            <div class="vt-week">Week 2</div>
+            <div class="vt-action">Shortlist & community vote</div>
+            <div class="vt-sub">Top 5 curated — WhatsApp + LinkedIn poll (5 days)</div>
+          </div>
+        </div>
+        <div class="vt-item">
+          <div class="vt-dot">3</div>
+          <div class="vt-content">
+            <div class="vt-week">Week 2–3</div>
+            <div class="vt-action">Winners announced + podcast drops</div>
+            <div class="vt-sub">Top 3 revealed · Reading framework sent to all members</div>
+          </div>
+        </div>
+        <div class="vt-item">
+          <div class="vt-dot">4</div>
+          <div class="vt-content">
+            <div class="vt-week">Last Thursday</div>
+            <div class="vt-action">Live reading session</div>
+            <div class="vt-sub">90-min virtual session · 6:00 PM GMT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="vote-panel">
+        <div class="vote-panel-header">
+          <h3 class="vote-panel-title">Current Month — Live Vote</h3>
+          <span class="vote-badge">Voting Open</span>
+        </div>
+        <p class="vote-subtitle">Select your preferred article · One vote per member</p>
+
+        <div class="candidate-list" id="candidates">
+          <div class="candidate" onclick="selectCandidate(0)" data-votes="42">
+            <div class="candidate-fill" style="width:54%"></div>
+            <div class="candidate-inner">
+              <div class="candidate-header">
+                <span class="candidate-title">AI-Enabled Decision Making in Supply Chain Networks: A Systematic Review</span>
+                <span class="candidate-pct">54%</span>
+              </div>
+              <div class="candidate-journal">J. of Operations Management · ABS 4★ · 2024</div>
+              <div class="candidate-bar"><div class="candidate-bar-fill" style="width:54%"></div></div>
+            </div>
+          </div>
+          <div class="candidate" onclick="selectCandidate(1)" data-votes="31">
+            <div class="candidate-fill" style="width:32%"></div>
+            <div class="candidate-inner">
+              <div class="candidate-header">
+                <span class="candidate-title">Algorithmic Management and Worker Autonomy in Gig Economy Platforms</span>
+                <span class="candidate-pct">32%</span>
+              </div>
+              <div class="candidate-journal">Work, Employment & Society · ABS 3 · 2023</div>
+              <div class="candidate-bar"><div class="candidate-bar-fill" style="width:32%"></div></div>
+            </div>
+          </div>
+          <div class="candidate" onclick="selectCandidate(2)" data-votes="18">
+            <div class="candidate-fill" style="width:14%"></div>
+            <div class="candidate-inner">
+              <div class="candidate-header">
+                <span class="candidate-title">Transformational Leadership and Team Performance in Hybrid Work Settings</span>
+                <span class="candidate-pct">14%</span>
+              </div>
+              <div class="candidate-journal">Leadership Quarterly · ABS 4★ · 2024</div>
+              <div class="candidate-bar"><div class="candidate-bar-fill" style="width:14%"></div></div>
+            </div>
+          </div>
+          <div class="candidate" onclick="selectCandidate(3)" data-votes="0">
+            <div class="candidate-fill" style="width:0%"></div>
+            <div class="candidate-inner">
+              <div class="candidate-header">
+                <span class="candidate-title">Resilience Strategies in Post-COVID Global Supply Chains: Evidence from UK Firms</span>
+                <span class="candidate-pct">0%</span>
+              </div>
+              <div class="candidate-journal">Supply Chain Management Int'l · ABS 3 · 2024</div>
+              <div class="candidate-bar"><div class="candidate-bar-fill" style="width:0%"></div></div>
+            </div>
+          </div>
+          <div class="candidate" onclick="selectCandidate(4)" data-votes="0">
+            <div class="candidate-fill" style="width:0%"></div>
+            <div class="candidate-inner">
+              <div class="candidate-header">
+                <span class="candidate-title">Human–AI Collaboration in Knowledge Work: A Mixed-Methods Investigation</span>
+                <span class="candidate-pct">0%</span>
+              </div>
+              <div class="candidate-journal">MIS Quarterly · ABS 4★ · 2025</div>
+              <div class="candidate-bar"><div class="candidate-bar-fill" style="width:0%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="vote-btn" id="vote-btn" onclick="castVote()" disabled>
+          Select an Article to Vote
+        </button>
+        <p class="vote-info">78 members have voted · Closes in 3 days</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="page-cta">
+  <h2 class="page-cta-heading reveal">Want to <em>nominate next month's article?</em></h2>
+  <div class="reveal">
+    <a href="join.html" class="btn-primary">Join & Nominate →</a>
+    <a href="how-it-works.html" class="btn-outline" style="margin-left:1rem">How It Works</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">iRead</div>
+    <div class="footer-tagline">"Read Deeply. Think Critically. Lead Boldly."</div>
+  </div>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="events.html">Events</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="vote.html">Vote</a>
+    <a href="join.html">Join</a>
+  </div>
+  <div class="footer-copy">© 2025 iRead · University of Huddersfield</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="src/main.js"></script>
+</body>
+</html>
